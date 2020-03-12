@@ -1,0 +1,96 @@
+@import '../../../constants/colors';
+@import '../../../constants/sizes';
+
+$zero-position: 67%;
+
+.map-block__wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: $mapSize;
+}
+
+.map-block__weather {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: $mapSize;
+}
+
+.map-block__legend-wrapper {
+  position: relative;
+  display: block;
+  margin: 30px auto 0;
+  width: 360px;
+  background: $white;
+  color: $dark-base;
+  padding: 0;
+  height: 26px;
+}
+
+.map-block__legend-name {
+  border: 0;
+  position: absolute;
+  display: inline;
+  vertical-align: top;
+}
+
+.map-block__legend-scale-line {
+  background-image: linear-gradient(
+    to right,
+    rgba(130, 22, 146, 1) 0%,
+    rgba(130, 22, 146, 1) 10%,
+    rgba(130, 22, 146, 1) 20%,
+    rgba(130, 22, 146, 1) 30%,
+    rgba(130, 87, 219, 1) 40%,
+    rgba(32, 140, 236, 1) 50%,
+    rgba(32, 196, 232, 1) 58%,
+    rgba(35, 221, 221, 1) $zero-position,
+    rgba(194, 255, 40, 1) 76%,
+    rgba(255, 240, 40, 1) 84%,
+    rgba(255, 194, 40, 1) 92%,
+    rgba(252, 128, 20, 1) 100%
+  );
+  width: 300px;
+  float: right;
+  margin: 15px 5px 5px;
+  position: inherit;
+  height: 5px;
+  border-top: 1px solid $dark-base;
+  border-bottom: 1px solid $dark-base;
+}
+
+.map-block__legend-scale-value {
+  position: absolute;
+  display: inline;
+  bottom: 0;
+  vertical-align: top;
+
+  &:not(:last-of-type) {
+    border-left: 1px solid $dark-base;
+    padding-left: 4px;
+  }
+
+  &:last-of-type {
+    border-right: 1px solid $dark-base;
+    padding-right: 4px;
+  }
+}
+
+.map-block__legend-scale-min-value {
+  left: 0;
+}
+
+.map-block__legend-scale-avg-value {
+  left: $zero-position;
+}
+
+.map-block__legend-scale-max-value {
+  right: 0;
+}
+
+.map-block__weather-overlay-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

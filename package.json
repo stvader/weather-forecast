@@ -1,0 +1,93 @@
+{
+  "name": "weather-forecast",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.24.3",
+    "array-move": "^2.2.1",
+    "bem-cn": "^3.0.1",
+    "d3": "^5.14.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-list-drag-and-drop": "^0.9.1",
+    "react-map-gl": "^5.1.5",
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.2.0",
+    "react-sortable-hoc": "^1.10.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "3.6.4",
+    "uuid": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/d3": "^5.7.2",
+    "@types/enzyme": "^3.10.4",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/fetch-mock": "^7.3.1",
+    "@types/jest": "24.0.19",
+    "@types/node": "12.11.5",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "16.9.2",
+    "@types/react-map-gl": "^5.0.3",
+    "@types/react-redux": "^7.1.5",
+    "@types/redux-mock-store": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "@types/uuid": "^3.4.6",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "fetch-mock": "^7.7.3",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "pretty-quick — staged",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../../constants/colors.scss';
+
+.tempereture-switcher__wrapper {
+  text-align: right;
+}
+
+.tempereture-switcher__temp-unit-note {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.tempereture-switcher__temp-unit-note-colored {
+  color: $blue-base;
+}

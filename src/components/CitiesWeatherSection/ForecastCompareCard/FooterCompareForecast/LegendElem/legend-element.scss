@@ -1,0 +1,16 @@
+.compare-legend__point {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.compare-legend__point-svg {
+  width: 15px;
+  height: 10px;
+}
+
+.compare-legend__point-circle {
+  cx: 5px;
+  cy: 5px;
+  r: 4px;
+  stroke: none;
+}

@@ -1,0 +1,25 @@
+@import '../../constants/colors.scss';
+
+.city-add-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background-color: $grey-base;
+}
+
+.city-add-panel__error {
+  margin-right: 20px;
+  color: $red-base;
+}
+
+.city-add-panel__forms-wrapper {
+  display: flex;
+}
+
+.city-add-panel__search-form {
+  margin: 0 30px;
+}
+
+.city-add-panel__coords-search-input {
+  width: 70px;
+}

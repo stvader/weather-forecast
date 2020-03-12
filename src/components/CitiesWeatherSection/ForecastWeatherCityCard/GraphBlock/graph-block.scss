@@ -1,0 +1,11 @@
+@import '../../../../constants/colors';
+
+.graph-forecast__column {
+  fill: $blue-base;
+}
+
+.graph-forecast__value {
+  font-family: sans-serif;
+  font-size: 11px;
+  fill: $white;
+}

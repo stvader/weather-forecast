@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+//----- LAYOUT ------
+
+.app__wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-gap: 5px;
+  grid-template-areas:
+    'header'
+    'sidebar'
+    'section'
+    'footer';
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.city-add-panel {
+  grid-area: sidebar;
+}
+
+.city-weather-section__wrapper {
+  grid-area: section;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+//--------- D3 -------------
+
+.d3-wrapper {
+  text-align: center;
+}
+
+.d3-component {
+  position: relative;
+}

@@ -1,0 +1,40 @@
+@import '../../../constants/colors';
+
+.weather-card {
+  width: auto;
+}
+
+.weather-card__info-wrapper {
+  display: flex;
+}
+
+.weather-card__info-main {
+  width: 150px;
+}
+
+.weather-card__selected-city {
+  margin-right: 10px;
+}
+
+.weather-card__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.weather-card__footer-btn {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.weather-card__card-state {
+  margin-right: 30px;
+  padding-top: 5px;
+}
+
+.weather-card__error-state {
+  color: $red-base;
+}
