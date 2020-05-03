@@ -47,7 +47,7 @@ const WeatherCityCardContainer: React.FC<IWeatherCityCardContainer> = ({
   handleAddForecastForCompare,
 }: IWeatherCityCardContainer) => {
   const { idCity, selected } = data;
-  const [isSelected, setIsSelected] = useState(selected);
+  const [isSelected, setIsSelected] = useState<boolean>(selected);
   const { styleObject, handleDeleteCardAnimation } = useAnimateCards(handleDeleteCard);
 
   const handleChangeSelect = useCallback(

@@ -6,7 +6,7 @@ export interface IStyledObject {
 }
 
 export const useAnimateCards = (handleFunction: () => void) => {
-  const [isShown, setShown] = useState(true);
+  const [isShown, setShown] = useState<boolean>(true);
   const styleObject: IStyledObject = useMemo(
     () => ({
       animation: `${isShown ? 'fadeIn' : 'fadeOut'} ${TIME_FADE}ms`,
@@ -15,7 +15,7 @@ export const useAnimateCards = (handleFunction: () => void) => {
   );
 
   const handleDeleteCardAnimation = useCallback(() => {
-    setShown(false);
+    setShown(() => false);
     handleFunction();
   }, [handleFunction]);
 

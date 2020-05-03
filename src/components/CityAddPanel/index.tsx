@@ -46,17 +46,17 @@ const CityAddPanelContainer: React.FC<ICityAddPanelContainer> = ({
   dispatchAddNewCityThroughtCoordsToList,
   cityWeatherReqState,
 }: ICityAddPanelContainer) => {
-  const [cityInput, setCityInput] = useState('');
-  const [lonInput, setLonInput] = useState('');
-  const [latInput, setLatInput] = useState('');
-  const [messageIncorrectCoords, setMessageIncorrectCoords] = useState('');
+  const [cityInput, setCityInput] = useState<string>('');
+  const [lonInput, setLonInput] = useState<string>('');
+  const [latInput, setLatInput] = useState<string>('');
+  const [messageIncorrectCoords, setMessageIncorrectCoords] = useState<string>('');
 
   const requestStateInfoElement = useMemo(() => getRequestStateInfoView(cityWeatherReqState), [
     cityWeatherReqState,
   ]);
 
   const handleSubmitCityThroughName = useCallback(
-    (e: Event) => {
+    (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setMessageIncorrectCoords('');
       dispatchAddNewCityToList(cityInput, false);
@@ -73,7 +73,7 @@ const CityAddPanelContainer: React.FC<ICityAddPanelContainer> = ({
   }, [cityWeatherReqState, requestStateInfoElement]);
 
   const handleSubmitCityThroughCoord = useCallback(
-    (e: Event) => {
+    (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       setMessageIncorrectCoords('');
@@ -128,7 +128,4 @@ const mapDispatchToProps = (dispatch: any) =>
     dispatch,
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(CityAddPanelContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CityAddPanelContainer);
